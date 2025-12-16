@@ -1,1 +1,67 @@
-/* место для вашего кода */
+.header {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 92px;
+    padding-bottom: 96px;
+}
+
+.header__logo-link {
+    display: block;
+    width: 148px;
+}
+
+.header__menu-list {
+    display: flex;
+    gap: 32px;
+}
+
+.header__menu-item {
+    list-style: circle;
+    font-size: 18px;
+}
+
+.header__menu-item-no-bullet {
+    list-style: none;
+}
+
+.header__menu-item-link-active {
+    text-decoration: none;
+}
+
+.header-address {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-style: normal;
+    max-width: 240px;
+    justify-self: end;
+    font-size: 18px;
+    line-height: 25px;
+    margin-right: 40px;
+}
+
+.address__tel,
+.address__mail {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.cover {
+    background-image: url("../images/cover.jpg");
+}
+
+.lots__list-item-first {
+    background-image: url("../images/card-lot-01.jpg");
+}
+
+.lots__list-item-second {
+    background-image: url("../images/card-lot-02.jpg");
+}
+
+.lots__list-item-third {
+    background-image: url("../images/card-lot-03.jpg");
+}
