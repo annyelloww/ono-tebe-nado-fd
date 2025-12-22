@@ -43,8 +43,7 @@
     margin-right: 40px;
 }
 
-.address__tel,
-.address__mail {
+.address__link {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
@@ -61,6 +60,7 @@
 
 .cover {
     position: relative;
+    background-size: cover;
     background-image: url("../images/cover.jpg");
     width: 1100px;
     min-height: 757px;
@@ -68,42 +68,59 @@
 }
 
 .cover__title {
+    position: relative;
+    z-index: 1;
+    padding: 165px 50px 0;
+    display: grid;
+    gap: 18px;
     color: #fff;
     font-weight: 700;
     font-size: 100px;
     letter-spacing: 0.3em;
     text-transform: uppercase;
+    margin-right: -0.3em;
 }
 
-.text-left {
-    position: absolute;
-    padding-top: 165px;
-    padding-left: 50px;
+.text-ono,
+.text-tebe,
+.text-nado {
+    position: static;
+    padding: 0;
+    display: block;
+    width: 100%;
 }
 
-.text-center {
-    position: absolute;
-    padding-top: 300px;
-    padding-left: 380px;
+.text-ono {
+    text-align: left;
 }
 
-.text-right {
-    position: absolute;
-    padding-top: 435px;
-    padding-left: 663px;
+.text-tebe {
+    text-align: center;
+}
+
+.text-nado {
+    text-align: right;
+}
+
+.cover__description {
+    position: relative;
+    z-index: 1;
+    padding: 0 50px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 102px;
 }
 
 .cover__description-text {
-    position: absolute;
+    position: static;
     display: inline-block;
     word-spacing: 19px;
     text-transform: uppercase;
     color: #fff;
     font-size: 22px;
-    padding-left: 50px;
-    padding-top: 668px;
-    width: 700px;
-    z-index: 10;
+    width: auto;
 }
 
 .cover__description-button {
@@ -113,11 +130,10 @@
     text-transform: uppercase;
     font-size: 22px;
     padding: 12px 32px;
-    margin-top: 656px;
-    margin-left: 794px;
+    margin: 0;
     display: inline-block;
-    position: absolute;
-    z-index: 10;
+    position: static;
+    z-index: 1;
 }
 
 .lots {
@@ -151,20 +167,21 @@
     background-position: center;
 }
 
-.lots__list-item-first {
+.lots__list-item-movie {
     background-image: url("../images/card-lot-01.jpg");
 }
 
-.lots__list-item-second {
+.lots__list-item-book {
     background-image: url("../images/card-lot-02.jpg");
 }
 
-.lots__list-item-third {
+.lots__list-item-painting {
     background-image: url("../images/card-lot-03.jpg");
 }
 
 .lots__list-item-link {
-    position: absolute;
+    display: block;
+    position: relative;
     z-index: 2;
     height: 100%;
     text-decoration: none;
@@ -206,7 +223,6 @@
     gap: 24px;
     width: 1050px;
     margin-left: 24px;
-    min-height: 595px;
     margin-bottom: 180px;
 }
 
@@ -236,12 +252,12 @@
     gap: 24px;
     font-size: 20px;
     line-height: 24px;
+    max-width: 687px; /* пыталась подогнать ширину, но не получается. делаю на один пиксель больше - слово "лотов" возвращается, но и слово "на" возвращается */
 }
 
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    min-height: 180px;
 }
 
 .footer__address {
