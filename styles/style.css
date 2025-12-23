@@ -81,24 +81,24 @@
     margin-right: -0.3em;
 }
 
-.text-ono,
-.text-tebe,
-.text-nado {
+.text-right,
+.text-center,
+.text-left {
     position: static;
     padding: 0;
     display: block;
     width: 100%;
 }
 
-.text-ono {
+.text-left {
     text-align: left;
 }
 
-.text-tebe {
+.text-center {
     text-align: center;
 }
 
-.text-nado {
+.text-right {
     text-align: right;
 }
 
@@ -258,6 +258,7 @@
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 82px;
 }
 
 .footer__address {
